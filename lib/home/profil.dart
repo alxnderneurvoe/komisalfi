@@ -1,4 +1,5 @@
 import 'package:apk_alfi/handler.dart';
+import 'package:apk_alfi/nav.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -97,27 +98,31 @@ class ProfilPage extends StatelessWidget {
                           ]))
                 ])
               ])),
-          Container(
-              margin: const EdgeInsets.only(top: 20, left: 20),
-              child: Column(children: [
-                Row(children: [
-                  const Icon(Icons.insert_link, size: 35),
-                  Container(
-                      decoration: BoxDecoration(
-                          border: Border(bottom: BorderSide(color: black))),
-                      width: 300,
-                      margin: const EdgeInsets.only(left: 10),
-                      child: const Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Manage Accounts',
-                              style: TextStyle(height: 3),
-                            ),
-                            Icon(Icons.chevron_right_outlined)
-                          ]))
-                ])
-              ]))
+          GestureDetector(
+              onTap: () {
+                navToStarted(context);
+              },
+              child: Container(
+                  margin: const EdgeInsets.only(top: 20, left: 20),
+                  child: Column(children: [
+                    Row(children: [
+                      const Icon(Icons.login, size: 35),
+                      Container(
+                          decoration: BoxDecoration(
+                              border: Border(bottom: BorderSide(color: black))),
+                          width: 300,
+                          margin: const EdgeInsets.only(left: 10),
+                          child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Log Out Account',
+                                  style: TextStyle(height: 3),
+                                ),
+                                Icon(Icons.chevron_right_outlined)
+                              ]))
+                    ])
+                  ])))
         ]));
   }
 }

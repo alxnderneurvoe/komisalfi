@@ -1,5 +1,6 @@
 import 'package:apk_alfi/home/profil.dart';
 import 'package:apk_alfi/home/search.dart';
+import 'package:apk_alfi/sign/start.dart';
 import 'package:flutter/material.dart';
 
 import 'home/home.dart';
@@ -8,35 +9,30 @@ import 'sign/register.dart';
 
 void navToLogin(BuildContext context) {
   Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const LoginPage()),
-  );
+      context, MaterialPageRoute(builder: (context) => const LoginPage()));
 }
 
 void navToRegister(BuildContext context) {
   Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const RegisterPage()),
-  );
+      context, MaterialPageRoute(builder: (context) => const RegisterPage()));
 }
 
 void navToHome(BuildContext context) {
   Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const HomePage()),
-  );
+      context, MaterialPageRoute(builder: (context) => const HomePage()));
 }
 
 void navToSearch(BuildContext context) {
   Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const SearchPage()),
-  );
+      context, MaterialPageRoute(builder: (context) => const SearchPage()));
 }
 
 void navToProfil(BuildContext context) {
   Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const ProfilPage()),
-  );
+      context, MaterialPageRoute(builder: (context) => const ProfilPage()));
+}
+
+void navToStarted(BuildContext context) {
+  Navigator.push(
+      context, MaterialPageRoute(builder: (context) => const StartPage()));
 }

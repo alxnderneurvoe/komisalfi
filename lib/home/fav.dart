@@ -21,21 +21,20 @@ class _FavPageState extends State<FavPage> {
         backgroundColor: light,
         body: Column(children: [
           Container(
-            height: 70,
-            decoration:
-                BoxDecoration(border: Border(bottom: BorderSide(color: black))),
-            padding:
-                const EdgeInsets.only(top: 25, bottom: 10, right: 20, left: 20),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text('Whislist'),
-                  Icon(
-                    Icons.arrow_back,
-                    color: Colors.grey.shade900,
-                  )
-                ]),
-          ),
+              height: 70,
+              decoration: BoxDecoration(
+                  border: Border(bottom: BorderSide(color: black))),
+              padding: const EdgeInsets.only(
+                  top: 25, bottom: 10, right: 20, left: 20),
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('Whislist'),
+                    Icon(
+                      Icons.arrow_back,
+                      color: Colors.grey.shade900,
+                    )
+                  ])),
           Padding(
               padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
               child: Row(children: [
@@ -66,19 +65,18 @@ class _FavPageState extends State<FavPage> {
                                       height: 1.2)),
                               const SizedBox(height: 2),
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text("Rp. 28.000",
-                                      style: TextStyle(
-                                          fontSize: 10, color: black)),
-                                  const Icon(
-                                    Icons.favorite,
-                                    color: Colors.pink,
-                                    size: 15,
-                                  )
-                                ],
-                              )
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text("Rp. 28.000",
+                                        style: TextStyle(
+                                            fontSize: 10, color: black)),
+                                    const Icon(
+                                      Icons.favorite,
+                                      color: Colors.pink,
+                                      size: 15,
+                                    )
+                                  ])
                             ]))),
                 SizedBox(
                     width: 100,

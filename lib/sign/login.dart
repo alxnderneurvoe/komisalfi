@@ -17,6 +17,9 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _email = TextEditingController();
   final TextEditingController _password = TextEditingController();
 
+  String emailvalid = 'alpi@gmail.com';
+  String passvalid = '12345678';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,10 +29,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(children: [
               Container(
                   margin: EdgeInsets.only(top: 100),
-                  child: Image.asset(
-                    'assets/logo-coklat.png',
-                    width: 100,
-                  )),
+                  child: Image.asset('assets/logo-coklat.png', width: 100)),
               Container(
                   margin: EdgeInsets.only(top: 90),
                   child: Column(
@@ -41,19 +41,15 @@ class _LoginPageState extends State<LoginPage> {
                                 horizontal: 50, vertical: 7),
                             padding: EdgeInsets.only(left: 10),
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: Colors.white,
-                            ),
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.white),
                             child: TextField(
                                 controller: _email,
                                 decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  hintText: 'Email',
-                                  icon: Icon(
-                                    CupertinoIcons.mail_solid,
-                                    color: Colors.black,
-                                  ),
-                                ))),
+                                    border: InputBorder.none,
+                                    hintText: 'Email',
+                                    icon: Icon(CupertinoIcons.mail_solid,
+                                        color: Colors.black)))),
                         Container(
                             height: 50,
                             margin: EdgeInsets.symmetric(
@@ -83,21 +79,19 @@ class _LoginPageState extends State<LoginPage> {
                                       style: TextStyle(fontSize: 12))
                                 ])),
                         Container(
-                          alignment: Alignment.center,
-                          height: 40,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: brown),
-                          margin: EdgeInsets.symmetric(
-                              horizontal: 55, vertical: 25),
-                          child: GestureDetector(
-                            onTap: () {
-                              navToHome(context);
-                            },
-                            child: Text('Login',
-                                style: TextStyle(color: Colors.white)),
-                          ),
-                        ),
+                            alignment: Alignment.center,
+                            height: 40,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: brown),
+                            margin: EdgeInsets.symmetric(
+                                horizontal: 55, vertical: 25),
+                            child: GestureDetector(
+                                onTap: () {
+                                  _validlogin();
+                                },
+                                child: Text('Login',
+                                    style: TextStyle(color: Colors.white)))),
                         Container(
                             alignment: Alignment.center,
                             margin: EdgeInsets.symmetric(
@@ -123,11 +117,28 @@ class _LoginPageState extends State<LoginPage> {
                                     navToRegister(context);
                                   },
                                   child: Text('Sign Up',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                      )))
+                                      style: TextStyle(color: Colors.white)))
                             ]))
                       ]))
             ])));
+  }
+
+  void _validlogin() {
+    if (emailvalid == _email.text && passvalid == _password.text) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Berhasil Login!'),
+          duration: Duration(seconds: 3),
+        ),
+      );
+      navToHome(context);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Email atau password salah!'),
+          duration: Duration(seconds: 4),
+        ),
+      );
+    }
   }
 }

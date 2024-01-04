@@ -13,31 +13,27 @@ class BottomNavBar extends StatelessWidget {
   final int currentIndex;
   final ValueChanged<int> onTap;
 
-  const BottomNavBar({
-    super.key,
-    required this.currentIndex,
-    required this.onTap,
-  });
+  const BottomNavBar(
+      {super.key, required this.currentIndex, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      currentIndex: currentIndex,
-      onTap: onTap,
-      backgroundColor: lightbrown,
-      selectedItemColor: darkbrown,
-      unselectedItemColor: Colors.black,
-      iconSize: 30,
-      showSelectedLabels: false,
-      showUnselectedLabels: false,
-      items: [
-        _buildNavItem(CupertinoIcons.house_fill, 0),
-        _buildNavItem(Icons.favorite, 1),
-        _buildNavItem(CupertinoIcons.bag_fill, 2),
-        _buildNavItem(CupertinoIcons.bell_solid, 3),
-      ],
-    );
+        type: BottomNavigationBarType.fixed,
+        currentIndex: currentIndex,
+        onTap: onTap,
+        backgroundColor: lightbrown,
+        selectedItemColor: darkbrown,
+        unselectedItemColor: Colors.black,
+        iconSize: 30,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: [
+          _buildNavItem(CupertinoIcons.house_fill, 0),
+          _buildNavItem(Icons.favorite, 1),
+          _buildNavItem(CupertinoIcons.bag_fill, 2),
+          _buildNavItem(CupertinoIcons.bell_solid, 3)
+        ]);
   }
 
   BottomNavigationBarItem _buildNavItem(
@@ -45,15 +41,14 @@ class BottomNavBar extends StatelessWidget {
     int index,
   ) {
     return BottomNavigationBarItem(
-      icon: Icon(
-        icon,
-        color: Colors.grey,
-      ),
-      activeIcon: Icon(
-        icon,
-        color: darkbrown,
-      ),
-      label: '',
-    );
+        icon: Icon(
+          icon,
+          color: Colors.grey,
+        ),
+        activeIcon: Icon(
+          icon,
+          color: darkbrown,
+        ),
+        label: '');
   }
 }
