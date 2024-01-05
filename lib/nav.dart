@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'home/home.dart';
-import 'home/profil.dart';
+import 'home/profil/profil.dart';
 import 'home/widgets/search.dart';
 import 'sign/login.dart';
 import 'sign/register.dart';
