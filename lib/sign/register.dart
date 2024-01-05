@@ -18,6 +18,8 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController _email = TextEditingController();
   final TextEditingController _password = TextEditingController();
 
+  bool centang = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,8 +93,18 @@ class _RegisterPageState extends State<RegisterPage> {
                             margin: EdgeInsets.symmetric(
                                 horizontal: 55, vertical: 5),
                             child: Row(children: [
-                              Icon(CupertinoIcons.square_fill,
-                                  color: white, size: 15),
+                              GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      centang = !centang;
+                                    });
+                                  },
+                                  child: Icon(
+                                      centang
+                                          ? Icons.square_rounded
+                                          : Icons.check_box,
+                                      color: centang ? white : white,
+                                      size: 20)),
                               Container(
                                   margin: EdgeInsets.only(left: 6),
                                   child: RichText(

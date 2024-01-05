@@ -16,6 +16,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final TextEditingController _email = TextEditingController();
   final TextEditingController _password = TextEditingController();
+  bool centang = false;
 
   String emailvalid = 'alpi@gmail.com';
   String passvalid = '12345678';
@@ -66,15 +67,25 @@ class _LoginPageState extends State<LoginPage> {
                                     icon: Icon(Icons.lock),
                                     hintText: 'Password'))),
                         Container(
-                            width: 100,
+                            width: 105,
                             margin: EdgeInsets.symmetric(
                                 horizontal: 55, vertical: 5),
                             child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Icon(CupertinoIcons.checkmark_square,
-                                      size: 15),
+                                  GestureDetector(
+                                      onTap: () {
+                                        setState(() {
+                                          centang = !centang;
+                                        });
+                                      },
+                                      child: Icon(
+                                          centang
+                                              ? Icons.square_rounded
+                                              : Icons.check_box,
+                                          color: centang ? white : white,
+                                          size: 20)),
                                   Text('Remember me',
                                       style: TextStyle(fontSize: 12))
                                 ])),
