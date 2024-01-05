@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'fav.dart';
 import 'notif.dart';
 import 'shop.dart';
+import 'widget_kopi_atas.dart';
 import 'widget_kopi_bawah.dart';
 import 'widget_kopi_scroll.dart';
 
@@ -69,15 +70,7 @@ class _HomePageState extends State<HomePage> {
                         Text('    Search Coffee',
                             style: TextStyle(color: Colors.grey))
                       ]))),
-              Container(
-                  margin:
-                      const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
-                  height: 120,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: darkbrown,
-                  ),
-                  child: Image.asset('assets/diskon.png', fit: BoxFit.cover)),
+              const KopiScrollAtas(),
               const KopiScroll(),
               const KopiBawah()
             ])),

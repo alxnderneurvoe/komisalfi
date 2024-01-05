@@ -2,12 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 Color light = const Color.fromARGB(255, 212, 149, 101);
+Color light2 = const Color.fromARGB(255, 255, 230, 211);
 Color brown = const Color.fromARGB(255, 103, 57, 31);
 Color darkbrown = const Color.fromARGB(255, 50, 36, 26);
 Color semibrown = const Color.fromARGB(255, 50, 31, 39);
 Color lightbrown = const Color.fromARGB(255, 121, 79, 53);
 Color white = const Color.fromARGB(255, 255, 255, 255);
 Color black = const Color.fromARGB(255, 0, 0, 0);
+Color opacity = const Color.fromARGB(255, 209, 193, 181);
 
 class BottomNavBar extends StatelessWidget {
   final int currentIndex;

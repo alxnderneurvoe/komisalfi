@@ -1,6 +1,7 @@
 import 'package:apk_alfi/handler.dart';
 import 'package:flutter/material.dart';
 
+import 'bottomsheet.dart';
 import 'home.dart';
 import 'notif.dart';
 import 'shop.dart';
@@ -39,84 +40,47 @@ class _FavPageState extends State<FavPage> {
               padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
               child: Row(children: [
                 //1
-                SizedBox(
-                    width: 100,
-                    height: 160,
-                    child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 5, vertical: 10),
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                  alignment: Alignment.center,
-                                  child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(10),
-                                      child: Image.asset('assets/kopi.jpeg',
-                                          fit: BoxFit.fitHeight,
-                                          height: 90,
-                                          width: 160))),
-                              const SizedBox(height: 5),
-                              Text("Avocado Salted Caramel",
-                                  style: TextStyle(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w500,
-                                      color: black,
-                                      height: 1.2)),
-                              const SizedBox(height: 2),
-                              Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text("Rp. 28.000",
-                                        style: TextStyle(
-                                            fontSize: 10, color: black)),
-                                    const Icon(
-                                      Icons.favorite,
-                                      color: Colors.pink,
-                                      size: 15,
-                                    )
-                                  ])
-                            ]))),
-                SizedBox(
-                    width: 100,
-                    height: 160,
-                    child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 10),
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                  alignment: Alignment.center,
-                                  child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(10),
-                                      child: Image.asset('assets/kopi.jpeg',
-                                          fit: BoxFit.fitHeight,
-                                          height: 90,
-                                          width: 160))),
-                              const SizedBox(height: 5),
-                              Text("Avocado Salted Caramel",
-                                  style: TextStyle(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w500,
-                                      color: black,
-                                      height: 1.2)),
-                              const SizedBox(height: 2),
-                              Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text("Rp. 28.000",
-                                        style: TextStyle(
-                                            fontSize: 10, color: black)),
-                                    const Icon(
-                                      Icons.favorite,
-                                      color: Colors.pink,
-                                      size: 15,
-                                    )
-                                  ])
-                            ])))
+                GestureDetector(
+                  onTap: () {
+                    _showBottomSheet(context);
+                  },
+                  child: SizedBox(
+                      width: 100,
+                      height: 160,
+                      child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 5, vertical: 10),
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                    alignment: Alignment.center,
+                                    child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: Image.asset('assets/kopi.jpeg',
+                                            fit: BoxFit.fitHeight,
+                                            height: 90,
+                                            width: 160))),
+                                const SizedBox(height: 5),
+                                Text("Brown Sugar Coffee",
+                                    style: TextStyle(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w500,
+                                        color: black,
+                                        height: 1.2)),
+                                const SizedBox(height: 2),
+                                Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text("Rp. 19.000",
+                                          style: TextStyle(
+                                              fontSize: 10, color: black)),
+                                      const Icon(Icons.favorite,
+                                          color: Colors.pink, size: 15)
+                                    ])
+                              ]))),
+                )
               ]))
         ]),
         bottomNavigationBar: BottomNavBar(
@@ -155,5 +119,14 @@ class _FavPageState extends State<FavPage> {
         );
         break;
     }
+  }
+
+  void _showBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+        isScrollControlled: true,
+        context: context,
+        builder: (BuildContext context) {
+          return const BottomSheetContent();
+        });
   }
 }

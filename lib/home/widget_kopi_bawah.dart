@@ -8,7 +8,7 @@ class KopiBawah extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 175,
+        height: 155,
         child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Padding(
