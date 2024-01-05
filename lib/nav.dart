@@ -1,11 +1,11 @@
-import 'package:apk_alfi/home/profil.dart';
-import 'package:apk_alfi/home/search.dart';
-import 'package:apk_alfi/sign/start.dart';
 import 'package:flutter/material.dart';
 
 import 'home/home.dart';
+import 'home/profil.dart';
+import 'home/widgets/search.dart';
 import 'sign/login.dart';
 import 'sign/register.dart';
+import 'sign/start.dart';
 
 void navToLogin(BuildContext context) {
   Navigator.push(

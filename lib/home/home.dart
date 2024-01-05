@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'fav.dart';
 import 'notif.dart';
 import 'shop.dart';
-import 'widget_kopi_atas.dart';
-import 'widget_kopi_bawah.dart';
-import 'widget_kopi_scroll.dart';
+import 'widgets/widget_kopi_atas.dart';
+import 'widgets/widget_kopi_bawah.dart';
+import 'widgets/widget_kopi_scroll.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

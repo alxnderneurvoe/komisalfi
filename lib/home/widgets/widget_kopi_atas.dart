@@ -1,7 +1,6 @@
 // ignore_for_file: file_names
 
 import 'package:apk_alfi/handler.dart';
-import 'package:apk_alfi/home/bottomsheet.dart';
 import 'package:flutter/material.dart';
 
 class KopiScrollAtas extends StatefulWidget {

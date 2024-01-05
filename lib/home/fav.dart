@@ -1,10 +1,10 @@
 import 'package:apk_alfi/handler.dart';
 import 'package:flutter/material.dart';
 
-import 'bottomsheet.dart';
 import 'home.dart';
 import 'notif.dart';
 import 'shop.dart';
+import 'widgets/bottomsheet.dart';
 
 class FavPage extends StatefulWidget {
   const FavPage({super.key});

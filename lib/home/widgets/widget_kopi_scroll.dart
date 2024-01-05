@@ -1,8 +1,10 @@
 // ignore_for_file: file_names
 
-import 'package:apk_alfi/handler.dart';
-import 'package:apk_alfi/home/bottomsheet.dart';
+
 import 'package:flutter/material.dart';
+
+import '../../handler.dart';
+import 'bottomsheet.dart';
 
 class KopiScroll extends StatelessWidget {
   const KopiScroll({super.key});
