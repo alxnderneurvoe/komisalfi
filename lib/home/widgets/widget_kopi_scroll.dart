@@ -1,6 +1,5 @@
 // ignore_for_file: file_names
 
-
 import 'package:flutter/material.dart';
 
 import '../../handler.dart';
@@ -14,7 +13,7 @@ class KopiScroll extends StatelessWidget {
     return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
             child: Row(
                 children: List.generate(10, (index) {
               return GestureDetector(

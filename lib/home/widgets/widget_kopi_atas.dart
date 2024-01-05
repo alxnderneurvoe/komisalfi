@@ -16,14 +16,14 @@ class _KopiScrollAtasState extends State<KopiScrollAtas> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: white,
-      height: 150 + 1 + 10,
+    return SizedBox(
+      height: 170,
       width: double.infinity,
       child: Column(children: [
-        SizedBox(
+        Container(
             height: 150,
-            width: double.infinity,
+            width: 354,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
             child: PageView.builder(
                 controller: _pageController,
                 itemCount: 10,
@@ -34,14 +34,12 @@ class _KopiScrollAtasState extends State<KopiScrollAtas> {
                 },
                 itemBuilder: (context, index) {
                   return Container(
-                    margin:
-                        const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                    height: 150,
-                    width: 150,
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(10)),
-                    child: Image.asset('assets/diskon.png', fit: BoxFit.cover, width: 254,),
-                  );
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 8),
+                      height: 150,
+                      width: 100,
+                      child: Image.asset('assets/diskon.png',
+                          fit: BoxFit.fitHeight));
                 })),
         const SizedBox(height: 10),
         Row(
